@@ -241,3 +241,20 @@ if (adminLoginForm) {
     }
   });
 }
+document.addEventListener('DOMContentLoaded', () => {
+  // Cart buttons
+  document.querySelectorAll('.add-to-cart').forEach(btn => {
+    btn.addEventListener('click', async (e) => {
+      e.preventDefault();
+      // Add your cart logic here
+    });
+  });
+
+  // Product links
+  document.querySelectorAll('.product-link').forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.location.href = e.target.href;
+    });
+  });
+});
