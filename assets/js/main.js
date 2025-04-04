@@ -121,8 +121,8 @@ function initThumbnails() {
   if (thumbnailContainer && mainImage && productData) {
     productData.images.forEach((image, index) => {
       const img = document.createElement('img');
-      img.src = `https://github.com/noman-011/mama/blob/main/assets/images/${image}`;
-      img.dataset.fullImage = `https://github.com/noman-011/mama/blob/main/assets/images/${image}`;
+      img.src = `https://raw.githubusercontent.com/noman-011/mama/main/assets/images/${image}`;
+      img.dataset.fullImage = `https://raw.githubusercontent.com/noman-011/mama/main/assets/images/${image}`;
       img.alt = `Thumbnail ${index + 1}`;
       img.classList.add('thumbnail');
       if (index === 0) img.classList.add('active');
@@ -146,7 +146,7 @@ function initRelatedProducts() {
     related.forEach(product => {
       const productHTML = `
         <div class="product-card">
-          <img src="https://github.com/noman-011/mama/blob/main/assets/images/${product.images[0]}" alt="${product.name}">
+          <img src="https://raw.githubusercontent.com/noman-011/mama/main/assets/images/${product.images[0]}" alt="${product.name}">
           <h3>${product.name}</h3>
           <p class="price">$${product.price.toFixed(2)}</p>
           <a href="/product/${product.id}" class="btn">View Details</a>
